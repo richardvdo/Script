@@ -1,0 +1,24 @@
+# /etc/systemd/system/gpio_onoff.service -> /lib/systemd/gpio_onoff.service
+# /lib/systemd/gpio_onoff.service
+# btnOffPin = 20
+# btnOnPin = 21
+
+[Unit]
+Description=Bouton on off
+Wants=network-online.target
+After=network-online.target
+ 
+[Service]
+Type=simple
+  
+ExecStart=/home/pi/scripts/gpio_on-off.sh
+StandardOutput=journal
+StandardError=journal 
+Restart=on-failure
+RestartSec=900s
+
+# Configures the time to wait before service is stopped forcefully.
+TimeoutStopSec=900
+ 
+[Install]
+WantedBy=multi-user.target
