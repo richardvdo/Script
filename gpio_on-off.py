@@ -2,6 +2,7 @@
 
 import RPi.GPIO as GPIO
 import time
+import os
 
 btnOffPin = 20
 btnOnPin = 21
@@ -9,6 +10,7 @@ btnOnPin = 21
 
 def shutdown(channel):
     GPIO.output(btnOnPin, GPIO.LOW)
+    os.system("systemctl poweroff")
 
 
 
