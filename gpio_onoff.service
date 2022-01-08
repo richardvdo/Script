@@ -13,6 +13,7 @@ After=systemd.ExecStart.
 Type=simple
   
 ExecStart=/home/pi/scripts/gpio_on-off.sh
+ExecStop=/home/pi/scripts/gpio_off.sh
 StandardOutput=journal
 StandardError=journal 
 Restart=on-failure
