@@ -1,0 +1,103 @@
+
+
+Sat Jan  8 20:37:39 2022
+Command line: TestDisk
+
+TestDisk 7.1, Data Recovery Utility, July 2019
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Linux, kernel 5.15.11-200.fc35.x86_64 (#1 SMP Wed Dec 22 15:41:11 UTC 2021) x86_64
+Compiler: GCC 11.2
+ext2fs lib: 1.46.3, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: 20140608, curses lib: ncurses 6.2
+/dev/sda: LBA, LBA48 support
+/dev/sda: size       500118192 sectors
+/dev/sda: user_max   500118192 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+/dev/mapper/fedora-home: LBA, LBA48 support
+/dev/mapper/fedora-home: size       376930304 sectors
+/dev/mapper/fedora-home: user_max   500118192 sectors
+/dev/mapper/fedora-root: LBA, LBA48 support
+/dev/mapper/fedora-root: size       104857600 sectors
+/dev/mapper/fedora-root: user_max   500118192 sectors
+/dev/mapper/fedora-swap: LBA, LBA48 support
+/dev/mapper/fedora-swap: size       16228352 sectors
+/dev/mapper/fedora-swap: user_max   500118192 sectors
+/dev/dm-0: LBA, LBA48 support
+/dev/dm-0: size       104857600 sectors
+/dev/dm-0: user_max   500118192 sectors
+/dev/dm-1: LBA, LBA48 support
+/dev/dm-1: size       16228352 sectors
+/dev/dm-1: user_max   500118192 sectors
+/dev/dm-2: LBA, LBA48 support
+/dev/dm-2: size       376930304 sectors
+/dev/dm-2: user_max   500118192 sectors
+Hard disk list
+Disk /dev/mmcblk0 - 7948 MB / 7580 MiB - CHS 242560 4 16, sector size=512
+Disk /dev/sda - 256 GB / 238 GiB - CHS 31130 255 63, sector size=512 - Micron 1100 SATA 256GB, S/N:170415997883, FW:M0DL002
+Disk /dev/mapper/fedora-home - 192 GB / 179 GiB - 376930304 sectors, sector size=512 - Micron 1100 SATA 256GB, S/N:170415997883, FW:M0DL002
+Disk /dev/mapper/fedora-root - 53 GB / 50 GiB - 104857600 sectors, sector size=512 - Micron 1100 SATA 256GB, S/N:170415997883, FW:M0DL002
+Disk /dev/mapper/fedora-swap - 8308 MB / 7924 MiB - 16228352 sectors, sector size=512 - Micron 1100 SATA 256GB, S/N:170415997883, FW:M0DL002
+Disk /dev/dm-0 - 53 GB / 50 GiB - 104857600 sectors, sector size=512 - Micron 1100 SATA 256GB, S/N:170415997883, FW:M0DL002
+Disk /dev/dm-1 - 8308 MB / 7924 MiB - 16228352 sectors, sector size=512 - Micron 1100 SATA 256GB, S/N:170415997883, FW:M0DL002
+Disk /dev/dm-2 - 192 GB / 179 GiB - 376930304 sectors, sector size=512 - Micron 1100 SATA 256GB, S/N:170415997883, FW:M0DL002
+Disk /dev/loop0 - 207 MB / 198 MiB - 405528 sectors (RO), sector size=512
+Disk /dev/loop1 - 4096 B - 8 sectors (RO), sector size=512
+Disk /dev/loop2 - 1839 KB / 1796 KiB - 3592 sectors (RO), sector size=512
+Disk /dev/loop3 - 1867 KB / 1824 KiB - 3648 sectors (RO), sector size=512
+Disk /dev/loop4 - 58 MB / 55 MiB - 113640 sectors (RO), sector size=512
+Disk /dev/loop5 - 64 MB / 61 MiB - 126632 sectors (RO), sector size=512
+Disk /dev/loop6 - 64 MB / 61 MiB - 126784 sectors (RO), sector size=512
+Disk /dev/loop7 - 172 MB / 164 MiB - 337424 sectors (RO), sector size=512
+Disk /dev/loop8 - 68 MB / 65 MiB - 133552 sectors (RO), sector size=512
+Disk /dev/loop9 - 34 MB / 32 MiB - 66440 sectors (RO), sector size=512
+
+Partition table type (auto): Intel
+Disk /dev/mmcblk0 - 7948 MB / 7580 MiB
+Partition table type: Intel
+
+Analyse Disk /dev/mmcblk0 - 7948 MB / 7580 MiB - CHS 242560 4 16
+Geometry from i386 MBR: head=215 sector=10
+BAD_RS LBA=8192 2082
+
+
+test_FAT()
+ 1 P FAT32 LBA              128   0  1  1465   3  7      85623
+sector_size  26912
+cluster_size 115
+reserved     25632
+fats         117
+dir_entries  27745
+sectors      27680
+media        69
+fat_length   25955
+secs_track   29550
+heads        25701
+hidden       1684960544
+total_sect   1948283493
+check_part_i386 failed for partition type 0C
+BAD_RS LBA=94208 3863
+check_part_i386 failed for partition type 83
+get_geometry_from_list_part_aux head=4 nbr=4
+get_geometry_from_list_part_aux head=8 nbr=4
+get_geometry_from_list_part_aux head=16 nbr=3
+get_geometry_from_list_part_aux head=32 nbr=3
+get_geometry_from_list_part_aux head=64 nbr=3
+get_geometry_from_list_part_aux head=128 nbr=3
+Current partition structure:
+Invalid FAT boot sector
+ 1 P FAT32 LBA              128   0  1  1465   3  7      85623
+ 1 P FAT32 LBA              128   0  1  1465   3  7      85623
+
+Warning: Bad starting head (CHS and LBA don't match)
+No ext2, JFS, Reiser, cramfs or XFS marker
+ 2 P Linux                 1472   0  1 242559   3 16   15429632
+ 2 P Linux                 1472   0  1 242559   3 16   15429632
+
+Warning: Bad starting sector (CHS and LBA don't match)
+No partition is bootable
+
+search_part()
+Disk /dev/mmcblk0 - 7948 MB / 7580 MiB - CHS 242560 4 16
+
+Results
+SIGHUP detected! TestDisk has been killed.
