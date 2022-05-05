@@ -1,6 +1,6 @@
 #!/bin/sh
 sshpass -p 66446644 ssh pi@192.168.1.54 /home/pi/scripts/update.sh &
-
+sshpass -p 66446644 ssh pi@192.168.1.67 /home/pi/scripts/update.sh &
 sshpass -p 66446644 ssh pi@192.168.1.58 /home/pi/scripts/update.sh &
 sshpass -p 66446644 ssh pi@192.168.1.57 /home/pi/scripts/update.sh &
 sshpass -p 66446644 ssh pi@192.168.1.232 /home/pi/scripts/update.sh &
