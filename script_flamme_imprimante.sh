@@ -1,3 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
-python3 /home/pi/Dev/scripts/script_flamme_imprimante.py
+python /home/pi/scripts/script_flamme_imprimante.py
+

@@ -6,7 +6,7 @@ After=network-online.target
 [Service]
 Type=simple
   
-ExecStart=/home/pi/scripts/script_flamme_serveur.sh
+ExecStart=/home/pi/scripts/script_flamme_imprimante.sh
  
 Restart=on-failure
 
