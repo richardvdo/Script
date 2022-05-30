@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from datetime import datetime
 from sqlite3 import Timestamp
 import RPi.GPIO as GPIO
 import time
@@ -16,8 +17,8 @@ def cb_compteur_principal(channel):
     client = mqtt.Client()
     client.connect(SERVEUR, 1883, 60)
     client.loop_start()
-    insertline = '{{"timestamp": "\'%s\'" , "watt": 1, "timestamp": "\'%s\'" }}'
-    var = (Timestamp, compteur)
+    insertline = '{{"timestamp": "\'%s\'" , "watt": 1, "total": "\'%s\'" }}'
+    var = (datetime.timestamp(datetime.now()), compteur)
     new_line = insertline % var
     topic = ("capteur/electrique/solaire/puissance")
     client.publish(topic, new_line, 1)
