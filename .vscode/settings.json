@@ -1,0 +1,82 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "192.168.1.196",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "recorder_ha",
+            "database": "home_assistant",
+            "username": "pi",
+            "password": "66446644"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "192.168.1.193",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "mysql_sensor",
+            "database": "sensor_v1",
+            "username": "pi",
+            "password": "66446644"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "192.168.1.193",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "mysql_solaire",
+            "database": "solaire_v1",
+            "username": "pi",
+            "password": "66446644"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "192.168.1.186",
+            "port": 8086,
+            "driver": "MySQL",
+            "name": "influxdb_homeassistant",
+            "database": "homeassistant",
+            "username": "homeassistant",
+            "password": "homeassistanthomeassistant"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "192.168.1.186",
+            "port": 8086,
+            "driver": "MySQL",
+            "name": "influxdb_graphite",
+            "database": "graphite",
+            "username": "homeassistant",
+            "password": "homeassistanthomeassistant"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "192.168.1.193",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "mysql_teleinfo",
+            "database": "teleinfo_v2",
+            "username": "pi",
+            "password": "66446644"
+        }
+    ]
+}
