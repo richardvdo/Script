@@ -17,14 +17,18 @@ def cb_compteur_principal(channel):
     client = mqtt.Client()
     client.connect(SERVEUR, 1883, 60)
     client.loop_start()
+    dt = datetime.now()
+    # getting the timestamp
+    ts = datetime.timestamp(dt)
     insertline = '{{"timestamp": "\'%s\'" , "watt": 1, "total": "\'%s\'" }}'
-    var = (datetime.timestamp(datetime.now()), compteur)
+    var = (ts, compteur)
     new_line = insertline % var
     topic = ("capteur/electrique/solaire/puissance")
     client.publish(topic, new_line, 1)
     client.loop_stop()
     client.disconnect()
     compteur = compteur + 1
+
 
 
 GPIO.setmode(GPIO.BCM)
